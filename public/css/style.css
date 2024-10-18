@@ -1,0 +1,156 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f2; /* Light background for contrast */
+    color: #3e2723; /* Dark brown for text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #a64d00; /* Warm orange-brown */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Form Styling */
+form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    color: #a64d00; /* Warm accent color */
+}
+
+form input[type='email'],
+form input[type='password'],
+form input[type='text'],
+form input[type='number'],
+form input[type='file'] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #d2691e; /* Warm sienna button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #bf360c; /* Darker orange on hover */
+}
+
+/* Navigation Styling */
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    background-color: #8b4513; /* Darker brown nav background */
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #a0522d; /* Slightly lighter brown hover */
+    border-radius: 5px;
+}
+
+/* Book Listing Styling */
+.main-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.books-container {
+    display: inline-block;
+    width: 250px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff7e6; /* Light warm beige for book container */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.books-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.books-container h2 {
+    font-size: 1.5rem;
+    color: #d2691e;
+}
+
+.books-container p {
+    color: #6d4c41; /* Soft brown for text */
+    margin: 10px 0;
+}
+
+.books-container .btn-link a {
+    display: inline-block;
+    background-color: #8b4513;
+    color: white;
+    padding: 10px 15px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.books-container .btn-link a:hover {
+    background-color: #bf360c;
+}
+
+/* Footer (Optional) */
+footer {
+    background-color: #8b4513;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

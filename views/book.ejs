@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%= book.title %> - Book Details</title>
+</head>
+
+<body>
+    <header>
+        <h1><%= book.title %></h1>
+        <%- include("./includes/nav.ejs", { token: token }) %> 
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="books-container">
+                <h2 class="title"><%= book.title %></h2>
+                <p class="author"><%= book.author %></p>
+                <p>$<%= book.price %></p>
+                <img src="<%= book.img %>" alt="<%= book.title %>">
+                <button class="btn-link">
+                    <a href="/api/books/">Go Back</a>
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

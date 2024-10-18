@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>All books</title>
+</head>
+
+<body>
+    <header>
+        <h1>All books</h1>
+        <%- include("./includes/nav.ejs", {token : token})%>
+    </header>
+    <main>
+        <div class="main-container">
+            <% books.forEach((book)=> { %>
+                <div class="books-container">
+                    <h2 class="title">
+                        Title:<%= book.title %>
+                    </h2>
+                    <p class="author">Author:
+                        <%= book.author %>
+                    </p>
+                    <p class="price">$
+                       Price:<%= book.price %>
+                    </p>
+                    <img class="image" src="<%= book.img %>" alt="<%= book.title %>">
+                    <button class="btn-link">
+                        <a href="/api/book/<%= book.id %>">Details</a>
+                    </button>
+                    <% if (token) { %>
+                        <button class="btn-link">
+                            <a href="/api/update-book/<%= book.id %>">Update</a>
+                        </button>
+                        <button class="btn-link">
+                            <a href="/api/delete/<%= book.id %>">Delete</a>
+                        </button>
+                    <% } %>
+                </div>
+            </div>
+                <% }) %>
+    </main>
+</body>
+
+</html>

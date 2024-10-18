@@ -10,10 +10,10 @@ import createBook from './book.js';
 
 // construct path
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const PATH = dirname(__filename);
 
 // path configuration
-dotenv.config({ path: path.resolve(__dirname, '..', '.env') });
+dotenv.config({ path: path.join(PATH, '..', '.env') });
 
 const sequelize = new Sequelize(
     process.env.DB_NAME,
@@ -22,9 +22,7 @@ const sequelize = new Sequelize(
     {
         host: process.env.DB_HOST,
         dialect: 'mysql',
-        dialectOptions: {
-            socketPath: '/tmp/mysql.sock'
-        },
+
         pool: {
             max: 5,
             min: 0,
